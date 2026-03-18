@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#F0F4F0">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:background="#2E7D32"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+                app:cardCornerRadius="14dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+                        android:hint="Habit name *" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_name"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="textCapSentences" android:maxLength="60"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:hint="Description (optional)"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_description"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="textMultiLine|textCapSentences" android:minLines="2" android:maxLines="4"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="12dp"
+                app:cardCornerRadius="14dp" app:cardElevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Frequency" android:textStyle="bold" android:textColor="#212121" android:textSize="14sp"/>
+                    <RadioGroup android:id="@+id/rg_frequency" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+                        <RadioButton android:id="@+id/rb_daily" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Daily" android:checked="true" android:buttonTint="#2E7D32"/>
+                        <RadioButton android:id="@+id/rb_weekly" android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Weekly" android:buttonTint="#2E7D32"/>
+                    </RadioGroup>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Color" android:textStyle="bold" android:textColor="#212121"
+                        android:textSize="14sp" android:layout_marginTop="12dp" android:layout_marginBottom="6dp"/>
+                    <com.google.android.material.chip.ChipGroup android:id="@+id/cg_color"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        app:singleSelection="true"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Emoji" android:textStyle="bold" android:textColor="#212121"
+                        android:textSize="14sp" android:layout_marginTop="12dp" android:layout_marginBottom="6dp"/>
+                    <com.google.android.material.chip.ChipGroup android:id="@+id/cg_emoji"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        app:singleSelection="true"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <Button android:id="@+id/btn_save" android:layout_width="match_parent"
+                android:layout_height="54dp" android:text="Save Habit" android:textSize="16sp"
+                android:backgroundTint="#2E7D32" app:cornerRadius="12dp" android:layout_marginBottom="8dp"/>
+            <Button android:id="@+id/btn_delete" android:layout_width="match_parent"
+                android:layout_height="54dp" android:text="Delete Habit" android:textSize="16sp"
+                android:backgroundTint="#C62828" app:cornerRadius="12dp" android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_habit" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp" app:cardCornerRadius="14dp" app:cardElevation="3dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <View android:id="@+id/view_color_bar" android:layout_width="6dp" android:layout_height="match_parent" android:background="#4CAF50"/>
+        <TextView android:id="@+id/tv_emoji" android:layout_width="44dp" android:layout_height="match_parent"
+            android:gravity="center" android:textSize="22sp" android:paddingStart="6dp"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:padding="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:id="@+id/tv_habit_name" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:textSize="16sp" android:textStyle="bold" android:textColor="#212121"/>
+                <TextView android:id="@+id/tv_frequency" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="9sp" android:textStyle="bold" android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp" android:background="@drawable/badge_background"
+                    android:textColor="#4CAF50" android:layout_marginEnd="8dp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tv_habit_desc" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#757575"
+                android:layout_marginTop="2dp" android:maxLines="1" android:ellipsize="end"/>
+            <TextView android:id="@+id/tv_streak" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="12sp" android:textColor="#FF5722" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center" android:paddingEnd="8dp">
+            <CheckBox android:id="@+id/checkbox_done" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:buttonTint="#2E7D32"/>
+            <ImageButton android:id="@+id/btn_edit" android:layout_width="30dp" android:layout_height="30dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_edit" android:contentDescription="Edit" android:alpha="0.5"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

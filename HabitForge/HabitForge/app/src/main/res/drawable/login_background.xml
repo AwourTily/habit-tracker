@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Deep forest gradient background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#0D1B0F"
+                android:centerColor="#1A3320"
+                android:endColor="#0A2212"
+                android:angle="135"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <!-- Subtle radial glow top -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#4033FF6600"
+                android:endColor="#00000000"
+                android:type="radial"
+                android:gradientRadius="400"/>
+            <size android:width="600dp" android:height="600dp"/>
+        </shape>
+    </item>
+</layer-list>
